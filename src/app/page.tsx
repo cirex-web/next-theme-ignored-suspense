@@ -1,8 +1,12 @@
 "use client";
 
+import { Suspense } from "react";
+import Home2 from "./page2";
+
 export default function Home() {
-  console.log(
-    "you shouldn't see this client-side! (should only be logged on the server)"
+  return (
+    <Suspense fallback={<div>loading...</div>}>
+      <Home2 />
+    </Suspense>
   );
-  throw new Promise(() => {});
 }

@@ -1,4 +1,4 @@
-import { ThemeProvider } from "next-themes";
+import { ClerkProvider } from "@clerk/nextjs";
 
 export default function RootLayout({
   children,
@@ -6,9 +6,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en">
       <body>
-        <ThemeProvider>{children}</ThemeProvider>
+        <ClerkProvider publishableKey="pk_test_YmVsb3ZlZC1jaGFtb2lzLTQzLmNsZXJrLmFjY291bnRzLmRldiQ">
+          {children}
+        </ClerkProvider>
       </body>
     </html>
   );
