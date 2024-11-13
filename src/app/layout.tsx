@@ -8,7 +8,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <ClerkProvider publishableKey="">{children}</ClerkProvider>
+        <ClerkProvider publishableKey="pk_test_YmVsb3ZlZC1jaGFtb2lzLTQzLmNsZXJrLmFjY291bnRzLmRldiQ">
+          {children}
+        </ClerkProvider>
       </body>
     </html>
   );
